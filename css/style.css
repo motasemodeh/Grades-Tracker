@@ -1,0 +1,96 @@
+body
+{
+    font-family: Roboto,'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    margin: 0;
+}
+header
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: black;
+    text-align: center;
+}
+.headerTitle
+{
+    grid-column: 1/-1;
+    color: rgb(255, 255, 255);
+
+    font-size: 25px;
+    font-weight: 700;
+}
+main
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-image: url("../assets/school.jpg");
+    height: 100%;
+}
+
+.userInputArea
+{
+    grid-column: 1/2;
+}
+
+.container
+{
+    opacity: 0.8;
+    background-color: blueviolet;
+    display: block;
+    margin-left: 150px;
+}
+input
+{
+    display: block;
+    margin: auto;
+    padding: 4px 0px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+}
+label
+{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+.formContainer
+{
+    opacity: 1;
+    width: 200px;
+    height: 230px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+
+#studentsTableArea
+{
+    grid-column: 2/3;
+}
+
+.addStudentForm
+{
+    padding: 25px;
+}
+button
+{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background: black;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+}
+#courseName
+{
+    display: block;
+    margin: auto;
+    padding: 4px 50px;
+    border-radius: 5px;
+    border: none;
+}
