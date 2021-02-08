@@ -108,6 +108,7 @@ button
     margin-left: auto;
     padding-top: 20px;
     margin-top: 70px;
+    opacity: 0.8;
 }
 
 #studentsTable
@@ -119,11 +120,15 @@ button
 table tr th
 {
     padding: 5px 25px;
-    border: 1px solid white;    
+    border: 1px solid white;   
+    background-color: black;
+    color: #fff; 
 }
 
 table tr td
 {
     padding: 5px 25px;
-    border: 1px solid white;    
+    border: 1px solid white;  
+    background-color: rgb(41, 40, 40);
+    color: #fff;   
 }
