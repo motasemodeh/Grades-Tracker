@@ -3,6 +3,9 @@ body
     font-family: Roboto,'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100%;
     margin: 0;
+    background-image: url("../assets/school.jpg");
+    
+    background-size: cover;
 }
 header
 {
@@ -23,7 +26,7 @@ main
 {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    background-image: url("../assets/school.jpg");
+
     height: 100%;
 }
 
