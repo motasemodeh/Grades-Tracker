@@ -94,3 +94,33 @@ button
     border-radius: 5px;
     border: none;
 }
+
+.tableArea
+{
+    display: block;
+    background-color: blueviolet;
+    width: 80%;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    margin-top: 70px;
+}
+
+#studentsTable
+{
+    margin: auto;
+    border: 1px solid white;    
+    border-collapse: collapse;
+}
+table tr th
+{
+    padding: 5px 25px;
+    border: 1px solid white;    
+}
+
+table tr td
+{
+    padding: 5px 25px;
+    border: 1px solid white;    
+}

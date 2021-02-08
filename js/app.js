@@ -1,44 +1,76 @@
-var studentName = document.getElementById('studentName');
-var courseName = document.getElementById('courseName');
-var addStudentForm = document.getElementById('addStudentForm');
-var studentsTable = document.getElementById('studentsTable');
-var submitBtn = document.getElementById('submitBtn');
+'use strict'
+
+var table = document.getElementById('studentsTable');
 
 
-var studentsTableArea = document.getElementById('studentsTableArea');
+function Student(student, course)
+{
+    this.studentName = student;
+    this.grade = this.getRandomGrade();
+    this.courseName = course;    
+}
 
-function student(fullName, course, grades) {
-    this.studentFullName = fullName;
-    this.studentGrades = grades;
-    this.courseName = course;
-  }
+Student.prototype.getRandomGrade = function()
+{
+    return this.grade = Math.floor(Math.random() * 101);
 
-  // students objects
-  var hana = new Person("hana", 48, "Arabic");
-  var farah = new Person("Farah", 48, "Scince");
-  var doaa = new Person("Doaa", 48, "Math");
+};
+
+var studentOne = new Student(studentName, Student.grade, courseName);
+console.log(studentOne);
+
+// render The Header
+function renderHeader() {
+    var headerRow = document.createElement('tr');
+    table.appendChild(headerRow);
+
+    var nameCell = document.createElement('th');
+    nameCell.textContent = 'Student Name';
+    headerRow.appendChild(nameCell);
+
+    var gradeCell = document.createElement('th');
+    gradeCell.textContent = 'Student Grade';
+    headerRow.appendChild(gradeCell);
+
+    var courseCell = document.createElement('th');
+    courseCell.textContent = 'Course';
+    headerRow.appendChild(courseCell);
+}
+renderHeader();
+
+Student.prototype.tableBody = function () {
+    var studentRow = document.createElement('tr');
+    table.appendChild(studentRow);
+
+    var studentName = document.createElement('td');
+    studentName.textContent = this.studentName;
+    studentRow.appendChild(studentName);
+    // console.log(studentName)
+
+    var studentGrade = document.createElement('td');
+    studentGrade.textContent = this.grade;
+    studentRow.appendChild(studentGrade);
+
+    var courseName = document.createElement('td');
+    courseName.textContent = this.courseName;
+    studentRow.appendChild(courseName);
+}
 
 
+var form = document.getElementById('addStudentForm');
+form.addEventListener('submit', submitUserData);
 
-  function tableHeader()
-  {
-    
-  }
 function submitUserData(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-    localStorage.setItem("userName", studentName.value);
-    
-    localStorage.setItem("courseName", courseName.value);
+    var newStudent = event.target.studentName.value;
+    var newCourse = event.target.courseName.value;
 
-    
-  }
-  
-  addStudentForm.addEventListener('submit', submitUserData);
+    var newStudent = new Student(newStudent, newCourse);
 
-  for (var i = 0; i < localStorage.length; i++) {
-    var x = localStorage.getItem("userName");
-    document.getElementById("studentsTableArea").innerHTML = x;
-    var y = localStorage.getItem("userName");
-    document.getElementById("studentsTableArea").innerHTML = y;
-  }
+    newStudent.tableBody();
+console.log(newStudent);
+// console.log(Student.grade)
+console.log(newCourse);
+}
+
